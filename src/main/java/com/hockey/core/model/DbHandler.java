@@ -1,4 +1,4 @@
-package com.hockey.core;
+package com.hockey.core.model;
 
 import org.apache.log4j.Logger;
 import java.io.BufferedReader;
@@ -14,6 +14,8 @@ import org.json.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import com.hockey.core.dao.ConferenceRepository;
 
 @Component
 public class DbHandler {

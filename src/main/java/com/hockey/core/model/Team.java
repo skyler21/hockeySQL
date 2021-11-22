@@ -1,10 +1,9 @@
-package com.hockey.core;
+package com.hockey.core.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Team {
@@ -21,7 +20,7 @@ public class Team {
 	private Integer confId;
 	private Integer franchiseId;
 
-	protected Team() {
+	public Team() {
 	}
 
 	public Team(Integer teamId, String name) {

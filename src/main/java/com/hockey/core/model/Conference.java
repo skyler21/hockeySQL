@@ -1,5 +1,7 @@
-package com.hockey.core;
+package com.hockey.core.model;
 
+
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,13 +17,30 @@ public class Conference {
   private Integer confId;
   private String name;
 
-  protected Conference() {}
+  public Conference() {
+	   // default constructor  
+  }
 
   public Conference(Integer confId, String name) {
+	super();  
     this.confId = confId;
     this.name = name;
   }
+  @Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Conference conference = (Conference) o;
+		return Objects.equals(id, conference.id) &&
+	 		Objects.equals(confId, conference.confId) &&
+			Objects.equals(name, conference.name);
+	}
 
+	@Override
+	public int hashCode() {
+
+		return Objects.hash(id, name);
+	}
   @Override
   public String toString() {
     return String.format(

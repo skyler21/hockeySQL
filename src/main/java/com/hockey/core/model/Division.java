@@ -1,4 +1,4 @@
-package com.hockey.core;
+package com.hockey.core.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class Division {
 	  private String name;
 	  private String nameShort;
 
-	  protected Division() {}
+	  public Division() {}
 
 	  public Division(Integer divId, String name, String nameShort) {
 	    this.divId = divId;
